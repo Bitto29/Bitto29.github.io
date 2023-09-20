@@ -72,6 +72,64 @@
       color: #ff6f00;
     }
 
+        .projects-container {
+      display: flex;
+      flex-wrap: wrap; /* Allows projects to wrap to the next line if there's not enough space */
+      justify-content: center; /* Center projects horizontally */
+      gap: 20px; /* Spacing between projects */
+    }
+
+    .project {
+      background-color: #fff; /* Background color for project sections */
+      color: #333; /* Text color for project sections */
+      padding: 20px;
+      border: 1px solid #ddd; /* Light border around project sections */
+      width: 300px; /* Adjust the width as needed */
+      border-radius: 10px; /* Rounded corners for project sections */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for project sections */
+      transition: transform 0.3s ease-in-out; /* Add a subtle hover effect */
+    }
+
+    .project:hover {
+      transform: scale(1.05); /* Enlarge project on hover */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adjust box shadow on hover */
+    }
+
+    /* Project Title Styles */
+    .project h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    /* Project Description Styles */
+    .project p {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    /* Learn More Link Styles */
+    .project a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff8000;
+      color: white;
+      text-decoration: none;
+      margin-top: 10px;
+      border-radius: 5px; /* Rounded corners for the button */
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .project a:hover {
+      background-color: #ff6600;
+    }
+
+    /* Project Image Styles */
+    .project img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
     ul {
       list-style: none;
       padding: 0;
@@ -92,6 +150,24 @@
       display: flex;
       flex-direction: column;
       max-width: 300px;
+    }
+
+   .contact-p{
+      margin-bottom: 0px;
+    }
+
+    .fa-square-facebook{
+      font-size: 25px;
+      margin-top:3px ;
+      margin-left: 3px;
+      margin-right: 3px;
+      margin-bottom: 7px;
+      cursor: pointer;
+      color: white;
+      /**display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;**/
     }
 
     input, textarea, button {
@@ -157,15 +233,15 @@
     </section>
 
     <section id="portfolio">
-      <h2>Portfolio</h2>
-      <p>
-        Here are some of my latest projects. Check them out!
-      </p>
-      <ul>
-        <li><a href="http://bitto29.github.io/password-generator">Project 1</a></li>
-        <li><a href="#">Project 2 <span class="unavailable"> ( unavailable )</span></a></li>
-        <li><a href="#">Project 3 <span class="unavailable"> ( unavailable )</span></a></li>
-      </ul>
+      <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project">
+          <img src="image/password-generator.png" alt="Project 1 Image"> <!-- Replace with your project image -->
+          <h3>password Generator</h3>
+          <p>Generate all your passwords without straggle.</p>
+          <a href="project1-details.html">Learn More</a> <!-- Replace with the actual link to project details -->
+        </div>
+      </div>
     </section>
 
     <section id="contact">
@@ -173,7 +249,8 @@
       <p>
         Want to collaborate or just say hi? Feel free to reach out!
       </p>
-       <a href="https://www.facebook.com/profile.php?id=100077225097511" class="fa fa-facebook"></a>
+       <a class="contact-a" href="https://www.facebook.com/profile.php?id=100077225097511"><i class="fa-brands fa-square-facebook"></i></a>
+       <a class="contact-a" href="https://www.facebook.com/basit.iqbal.bitto"><i class="fa-brands fa-square-facebook"></i></a>
       <form action="mailto:bitto3626pc@gmail.com" method="post" enctype="text/plain">
         <input type="text" placeholder="Your Name">
         <input type="email" placeholder="Your Email">
@@ -187,4 +264,5 @@
     <p>&copy; 2023 Bitto - All rights reserved.</p>
   </footer>
 </body>
+  <script src="https://kit.fontawesome.com/ac0f01ecf8.js" crossorigin="anonymous"></script
 </html>
