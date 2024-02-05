@@ -319,11 +319,11 @@
        <a href="https://www.linkedin.com/in/basit-iqbal-bitto-60bb8626b"><i class="fa-brands fa-linkedin"></i></a>
        <a href="https://discord.gg/8v9JhUPj"><i class="fa-brands fa-discord"></i></a>
        <a href="https://github.com/Bitto29"><i class="fa-brands fa-github"></i></a>
-      <form action="mailto:bitto3626pc@gmail.com" method="post" enctype="text/plain">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
+      <form onsubmit="submitForm(); return false;">
+       <input type="text" id="name" placeholder="Your Name" required>
+       <input type="email" id="email" placeholder="Your Email" required>
+       <textarea id="message" placeholder="Your Message" required></textarea>
+       <button type="submit">Send Message</button>
       </form>
     </section>
   </main>
@@ -332,5 +332,17 @@
     <p>&copy; 2023 Bitto - All rights reserved.</p>
   </footer>
 </body>
-  <script src="https://kit.fontawesome.com/ac0f01ecf8.js" crossorigin="anonymous"></script
+  <script src="https://kit.fontawesome.com/ac0f01ecf8.js" crossorigin="anonymous"></script>
+      <script> function submitForm() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      var mailtoLink = 'mailto:bitto3626pc@gmail.com' +
+                       '?subject=' + encodeURIComponent('Message from ' + name) +
+                       '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage: ' + message);
+
+      window.location.href = mailtoLink;
+  </script>
+    }
 </html>
